@@ -18,6 +18,7 @@
   <tbody>
     <% @products.each do |product| %>
       <tr>
+        <td><<%= image_tag(product.avatar.url(:thumb)) %></td> <!-- homework day 17 thumbtag -->
         <td><%= product.name %></td>
         <td><%= product.price %></td>
         <td><%= product.quantity %></td>
