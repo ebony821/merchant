@@ -2,7 +2,17 @@ class Order < ApplicationRecord
   has_many :line_itmes, dependent: :destroy
   belongs_to :user
 
+  validates: name, :address, :user_id, presence: true
+
   PATMENT_TYPES =["cash", "check", "paypal", "COD", "Debit", "Credit"]
+  validates :pay _tpye, presence: true inclusion: PATMENT_TYPES
+end
+
+
+def add_line_items_from_cart(cart)
+  cart.line_itmes.each do |item|
+  item.cart_id = nil
+  line_itmes << item
 end
 
 # == Schema Information

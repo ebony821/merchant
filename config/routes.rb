@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'orders/new'
-
-  get 'orders/show'
-
-  get 'carts/edit'
 
   # get 'shop' => 'storefront#index'
 
