@@ -1,15 +1,16 @@
-class Category < ApplicationRecord
-has_many :products
+require 'test_helper'
 
-  validates :name, presence:true, uniqueness: true
+class CartTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
 end
 
 # == Schema Information
 #
-# Table name: categories
+# Table name: carts
 #
 #  id         :integer          not null, primary key
-#  name       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
