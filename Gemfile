@@ -33,13 +33,16 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-
+# **************************************our gems**********************
+# ********************************************************************
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'stamp'
 gem 'simple_form'
 gem 'annotate'
 gem 'paperclip', '~> 5.0.0'
+gem 'devise'
+# gem 'bcrypt', platforms: :ruby
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 
