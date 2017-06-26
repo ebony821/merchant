@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'orders/new'
+
+  get 'orders/show'
+
   get 'carts/edit'
 
   # get 'shop' => 'storefront#index'
@@ -19,7 +23,8 @@ Rails.application.routes.draw do
   end
 
 resource :cart, only: [:edit, :update, :destroy]
-resources :line_items, only: [:create]
+resources :line_items, only: [:create, :destroy]
+resources :order, only: [:snew,:create, :show]
 
   # root 'admin/products#index'
 

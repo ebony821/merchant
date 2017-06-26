@@ -1,6 +1,8 @@
 class Order < ApplicationRecord
   has_many :line_itmes, dependent: :destroy
   belongs_to :user
+
+  PATMENT_TYPES =["cash", "check", "paypal", "COD", "Debit", "Credit"]
 end
 
 # == Schema Information
