@@ -6,6 +6,23 @@ class Cart < ApplicationRecord
 
 
   end
+
+
+def add product(product_id)
+  product = Prdocut.find(product_id)
+  current_item = line_items.find_by(product_id: product_id)
+
+  if current_item
+    #increase quantity by one
+  else
+    #make a new line item
+    current_item.quantity += 1
+    current_item = line_items.build(product: product, price:product.price)
+
+end
+    current_item
+  end
+
 end
 
 
