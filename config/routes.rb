@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
 resource :cart, only: [:edit, :update, :destroy]
 resources :line_items, only: [:create, :destroy]
-resources :order, only: [:snew,:create, :show]
+resources :orders, only: [:new,:create, :show]
 
   # root 'admin/products#index'
 
